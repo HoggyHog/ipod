@@ -20,7 +20,7 @@ class Controls extends React.Component{
   }
   
   render(){
-
+    
     return (
       <div className='controls' id="controls" >
           <div className='row1' id="row1">MENU</div>
@@ -42,6 +42,12 @@ class Controls extends React.Component{
   }
   componentDidMount(){
     var controls=document.getElementById('controls')
+    controls.addEventListener('mouseover',this.mouse)
+    var row1=document.querySelector('.row1')
+    row1.addEventListener('mouseover',this.mouse)
+    var row2=document.querySelector('.row2')
+    controls.addEventListener('mouseover',this.mouse)
+    var row3=document.querySelector('.row3')
     controls.addEventListener('mouseover',this.mouse)
     
     
