@@ -1,13 +1,96 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+* {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+  --basic:rgb(231,233,236);
+  --dark:rgb(142,149,150);
 }
+
+.app{
+  height:60vh;
+  width:35vh;
+  margin:auto;
+  margin-top: 15vh;
+  background-image: radial-gradient(var(--basic) 60%,var(--dark));
+  border-radius: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display{
+  height:25vh;
+  width:32vh;
+  background-color:red;
+  margin:auto;
+  margin-top:5vh;
+  border:solid black 3px;
+  border-radius: 5%;
+}
+
+.controls{
+  height:24vh;
+  width:24vh;
+  background-color: blue;
+  margin-bottom: 3vh;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row1,.row2,.row3{
+  height:8vh;
+  
+  color:var(--basic)
+}
+
+.row1,.row2,.row3,.rewinind,.forward{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row2{
+  justify-content: space-around;
+}
+
+.row1{
+  font-size: 1.5rem;
+}
+
+.row2 img{
+  height: 5vh;
+  width:5vh;
+}
+
+.row1,.row3{
+  justify-content: center;
+
+}
+
+.center{
+  height:1vh;
+  width:1vh;
+  background-color: black;
+}
+
+
+.select{
+  height: 8vh;
+  width:8vh;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 50%;
+  
+}
+
+
+
