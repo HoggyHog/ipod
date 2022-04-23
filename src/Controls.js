@@ -2,7 +2,22 @@ import React from 'react'
 
 
 class Controls extends React.Component{
-
+  mouse=(e)=>{
+    var w=(e.clientY/window.innerHeight)-0.6
+    var h=(e.clientX/window.innerWidth)-0.5
+    if(w>=0&&h>0){
+      this.props.selectPage(2)
+    }
+    if(w<0&&h>=0){
+      this.props.selectPage(1)
+    }
+    if(w<=0&&h<0){
+      this.props.selectPage(4)
+    }
+    if(w>0&&h<=0){
+      this.props.selectPage(3)
+    }
+  }
   
   render(){
 
@@ -13,7 +28,7 @@ class Controls extends React.Component{
             
             <i className="fa-solid fa-backward-fast fa-2x"></i>
             <div className='select'>
-              <div className='center'></div>
+              
             </div>
             <i className="fa-solid fa-forward-fast fa-2x" ></i>
             
@@ -27,29 +42,14 @@ class Controls extends React.Component{
   }
   componentDidMount(){
     var controls=document.getElementById('controls')
-    controls.addEventListener('mouseover',mouse)
+    controls.addEventListener('mouseover',this.mouse)
     
     
     }
 }
 
 //center 0.5,0.6
-const mouse=(e)=>{
-  var w=(e.clientY/window.innerHeight)-0.6
-  var h=(e.clientX/window.innerWidth)-0.5
-  if(w>=0&&h>0){
-    console.log('c2')
-  }
-  if(w<0&&h>=0){
-    console.log('c1')
-  }
-  if(w<=0&&h<0){
-    console.log('c4')
-  }
-  if(w>0&&h<=0){
-    console.log('c3')
-  }
-}
+
 
 
 
