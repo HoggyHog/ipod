@@ -29,19 +29,22 @@
 }
 
 /* display */
-.display{
+.display,.big-display{
   height:25vh;
   width:32vh;
-  
+  background-color: var(--bg);
   margin:auto;
   margin-top:5vh;
   border:solid black 3px;
   border-radius: 5%;
-}
-
-.display{
   display: flex;
   flex-direction: row;
+}
+
+.big-display{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .left-half{
@@ -69,10 +72,12 @@
 
 .heading1{
   font-size: 1.5rem;
+  margin:1vh;
 }
 
 .heading2{
   font-size:0.8rem;
+  margin:1vh;
 }
 
 .page1,.page2,.page3,.page4{
