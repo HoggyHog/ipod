@@ -88,7 +88,8 @@
 }
 
 .a1,.a2,.a3,.a4{
-  
+  display: flex;
+  align-items: center;
   color:white;
   visibility:var(--visible);
 }

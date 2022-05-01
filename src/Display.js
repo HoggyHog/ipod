@@ -5,17 +5,28 @@ import Coverflow from './Pages/Coverflow'
 import Settings from './Pages/Settings'
 import Games from './Pages/Games'
 
-class Display extends React.Component{
-    render(){
-        return (
-        <HomePage page={this.props.page} />
-        //<Music page={this.props.page}/>
-        //<Coverflow />
-        //<Settings />
-        //<Games />
-      )
 
-    }
+
+function Display(props) {
+
+  if(props.component==-1){
+    return(<HomePage page={props.page} />)  
+  }
+  if(props.component==0){
+    return(<Coverflow />)  
+  }
+  if(props.component==1){
+    return(<Music page={props.page}/>)  
+  }
+  if(props.component==2){
+    return(<Games />)  
+  }
+  if(props.component==3){
+    return(<Settings />)  
+  }
+
 }
+
+
 
 export default Display

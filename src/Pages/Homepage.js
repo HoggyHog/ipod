@@ -24,13 +24,14 @@ class HomePage extends React.Component{
     for(var i of arrows){
       i.style.setProperty('--visible','hidden')
     }
-    pages[n-1].style.setProperty('--bg','rgb(0, 150, 255)')
-    pages[n-1].style.setProperty('--font','white')
-    arrows[n-1].style.setProperty('--visible','none')
+    pages.at(n).style.setProperty('--bg','rgb(0, 150, 255)')
+    pages.at(n).style.setProperty('--font','white')
+    arrows.at(n).style.setProperty('--visible','none')
      
   }
 
   componentDidUpdate(){
+    console.log(this.props.page)
     this.select(this.props.page)
   }
 
