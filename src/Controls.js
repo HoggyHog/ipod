@@ -21,7 +21,7 @@ class Controls extends React.Component{
           <div className='row2' id="row2">
             
             <i className="fa-solid fa-backward-fast fa-2x"></i>
-            <div className='select' onClick={this.props.goto_Page}>
+            <div className='select' onClick={this.props.go}>
               
             </div>
             <i className="fa-solid fa-forward-fast fa-2x" ></i>

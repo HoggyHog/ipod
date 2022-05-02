@@ -24,13 +24,45 @@ class App extends React.Component {
   goto_Page=()=>{
     this.setState({
       component:this.state.page
+    },()=>{
+      console.log("component",this.state.component)
+    console.log("page",this.state.page)
     })
   }
-
-  go_Back=()=>{
+  music_goto=()=>{
+    var c=10+this.state.page
     this.setState({
-      component:-1
+      component:c
+    },()=>{
+      console.log('ismee')
+      console.log("component",this.state.component)
+    console.log("page",this.state.page)
     })
+  }
+  go=()=>{
+    console.log("component",this.state.component)
+    console.log("page",this.state.page)
+    if(this.state.component==1){
+      this.music_goto()
+    }
+    else{
+      this.goto_Page()
+    }
+  }
+
+  
+  go_Back=()=>{
+    if(this.state.component>=10){
+      this.setState({
+        component:1
+      })
+    }
+    else{
+      this.setState({
+        component:-1
+      })
+
+    }
   }
 
   render(){
@@ -38,7 +70,12 @@ class App extends React.Component {
     return (
       <div className='app'>
         <Display page={page} component={component}/>
-        <Controls selectPage={this.selectPage} goto_Page={this.goto_Page} go_Back={this.go_Back}/>
+        <Controls 
+        selectPage={this.selectPage}
+        goto_Page={this.goto_Page} 
+        go_Back={this.go_Back}
+        music_goto={this.music_goto}
+        go={this.go}/>
       </div>
     )
   } 

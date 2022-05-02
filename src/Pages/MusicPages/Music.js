@@ -44,13 +44,13 @@ class Music extends React.Component{
           </div>
           <div className='pages'>
             <div className='page1'>
-              <span className='heading2'>All songs</span><span className="a1">></span>
+              <span className='heading3'>All songs</span><span className="a1">></span>
             </div>
             <div className='page2'>
-              <span className='heading2'>Artists</span><span className="a2">></span>
+              <span className='heading3'>Artists</span><span className="a2">></span>
             </div>
             <div className='page3'>
-              <span className='heading2'>Albums</span><span className="a3">></span>
+              <span className='heading3'>Albums</span><span className="a3">></span>
             </div>
             
           </div>

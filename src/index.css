@@ -71,11 +71,15 @@
 }
 
 .heading1{
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin:1vh;
 }
 
 .heading2{
+  font-size:0.7rem;
+  margin:1vh;
+}
+.heading3{
   font-size:0.8rem;
   margin:1vh;
 }
