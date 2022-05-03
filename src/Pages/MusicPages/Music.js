@@ -23,14 +23,20 @@ class Music extends React.Component{
     for(var i of arrows){
       i.style.setProperty('--visible','hidden')
     }
-    pages[n].style.setProperty('--bg','rgb(0, 150, 255)')
-    pages[n].style.setProperty('--font','white')
-    arrows[n].style.setProperty('--visible','none')
+    pages.at(n).style.setProperty('--bg','rgb(0, 150, 255)')
+    pages.at(n).style.setProperty('--font','white')
+    arrows.at(n).style.setProperty('--visible','none')
      
+     
+  }
+  componentDidMount(){
+    console.log("component",this.props.component)
+    this.select(this.props.page)
   }
 
   componentDidUpdate(){
-    this.select((this.props.page%3))
+    console.log("page",this.props.page)
+    this.select(this.props.page)
   }
 
   render(){
@@ -44,13 +50,13 @@ class Music extends React.Component{
           </div>
           <div className='pages'>
             <div className='page1'>
-              <span className='heading3'>All songs</span><span className="a1">></span>
+              <span className='heading3'>All songs</span><span className="a1">{'>'}</span>
             </div>
             <div className='page2'>
-              <span className='heading3'>Artists</span><span className="a2">></span>
+              <span className='heading3'>Artists</span><span className="a2">{'>'}</span>
             </div>
             <div className='page3'>
-              <span className='heading3'>Albums</span><span className="a3">></span>
+              <span className='heading3'>Albums</span><span className="a3">{'>'}</span>
             </div>
             
           </div>

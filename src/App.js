@@ -7,29 +7,43 @@ class App extends React.Component {
   constructor(){
     super()
     this.state={
-      page:1,
-      component:-1
+      page:0,
+      component:-1,
     }
   }
 
   selectPage=(c)=>{
-    var p=(this.state.page+c)%4
-    
-    
-    this.setState({
+    if(this.state.component==1){
+      var p=(this.state.page+c)%3
+      this.setState({
+        page:p
+    }) 
+    }
+    else{
+      var p=(this.state.page+c)%4
+      this.setState({
       page:p
     }) 
+    }
+    
   }
 
   goto_Page=()=>{
     this.setState({
       component:this.state.page
     },()=>{
-      console.log("component",this.state.component)
-    console.log("page",this.state.page)
+      
+      if(this.state.component==1){
+        this.setState({
+          page:0
+        })
+      }
+      
     })
   }
+
   music_goto=()=>{
+    
     var c=10+this.state.page
     this.setState({
       component:c
@@ -39,6 +53,7 @@ class App extends React.Component {
     console.log("page",this.state.page)
     })
   }
+
   go=()=>{
     console.log("component",this.state.component)
     console.log("page",this.state.page)

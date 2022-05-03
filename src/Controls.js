@@ -6,9 +6,8 @@ class Controls extends React.Component{
   constructor(){
     super()
     this.state={
-      counter:null,
       angle:0,
-    
+      c:false,
       p:null
     }
   }
@@ -52,24 +51,23 @@ class Controls extends React.Component{
         })
       }
 
-      if(s-this.state.angle>60){
+      if(s-this.state.angle>60&&this.state.c==true){
         this.setState({
           angle:s.toFixed(2),
           p:1
-        })
-        this.props.selectPage(this.state.p)
-        console.log(this.state.p)
+        },()=>{
+          this.props.selectPage(this.state.p) //we send this is a callback, so that this runs only after setstate is done
+        })  
       }
 
-      if(this.state.angle-s>60){
+      if(this.state.angle-s>60&&this.state.c==true){
         this.setState({
           angle:s.toFixed(2),
           p:-1
-        })
-        this.props.selectPage(this.state.p)
-        console.log(this.state.p)
-      }  
-
+        },()=>{
+          this.props.selectPage(this.state.p)  // same as above
+        })  
+      }    
     })
   }
 }

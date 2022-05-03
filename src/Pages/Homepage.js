@@ -29,9 +29,11 @@ class HomePage extends React.Component{
     arrows.at(n).style.setProperty('--visible','none')
      
   }
+  componentDidMount(){              //to highlight the cover flow as soon as we get in
+    this.select(this.props.page)
+  }
 
-  componentDidUpdate(){
-    console.log(this.props.page)
+  componentDidUpdate(){             //to highlight the diff sections as we scroll
     this.select(this.props.page)
   }
 
@@ -46,16 +48,16 @@ class HomePage extends React.Component{
           </div>
           <div className='pages'>
             <div className='page1'>
-              <span className='heading2'>Cover Flow</span><span className="a1">></span>
+              <span className='heading2'>Cover Flow</span><span className="a1">{'>'}</span>
             </div>
             <div className='page2'>
-              <span className='heading2'>Music</span><span className="a2">></span>
+              <span className='heading2'>Music</span><span className="a2">{'>'}</span>
             </div>
             <div className='page3'>
-              <span className='heading2'>Games</span><span className="a3">></span>
+              <span className='heading2'>Games</span><span className="a3">{'>'}</span>
             </div>
             <div className='page4'>
-              <span className='heading2'>Settings</span><span className="a4">></span>
+              <span className='heading2'>Settings</span><span className="a4">{'>'}</span>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ function Display(props) {
     return(<Coverflow />)  
   }
   if(props.component==1){
-    return(<Music page={props.page}/>)  
+    return(<Music page={props.page} component={props.component}/>)  
   }
   if(props.component==10){
     return(<AllSongs/>)  
