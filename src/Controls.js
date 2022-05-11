@@ -13,21 +13,21 @@ class Controls extends React.Component{
   }
   
   render(){
-    
+    const {isPlaying,currentSongIndex}=this.props
     return (
       <div className='controls' id="controls" >
           <div className='row1' id="row1" onClick={this.props.go_Back}>MENU</div>
           <div className='row2' id="row2">
             
-            <i className="fa-solid fa-backward-fast fa-2x"></i>
+            <i className="fa-solid fa-backward-fast fa-2x" onClick={this.props.backward}></i>
             <div className='select' onClick={this.props.go}>
               
             </div>
-            <i className="fa-solid fa-forward-fast fa-2x" ></i>
+            <i className="fa-solid fa-forward-fast fa-2x" onClick={this.props.forward}></i>
             
           </div>
           <div className='row3' id="row3">
-            <i className="fa-solid fa-play fa-2x"></i>
+            <i className={`fa-solid fa-${isPlaying&&(currentSongIndex!=null)?"pause":"play"} fa-2x `} onClick={this.props.player_function}></i>
           </div>
           
         </div>

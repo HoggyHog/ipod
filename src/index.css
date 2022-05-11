@@ -17,8 +17,8 @@
 }
 
 .app{
-  height:60vh;
-  width:35vh;
+  height:70vh;
+  width:45vh;
   margin:auto;
   margin-top: 15vh;
   background-image: radial-gradient(var(--basic) 50%,var(--dark));
@@ -30,8 +30,8 @@
 
 /* display */
 .display,.big-display{
-  height:25vh;
-  width:32vh;
+  height:30vh;
+  width:40vh;
   background-color: var(--bg);
   margin:auto;
   margin-top:5vh;
@@ -102,10 +102,10 @@
 /* controls */
 
 .controls{
-  height:24vh;
-  width:24vh;
+  height:27vh;
+  width:27vh;
   background-color: white;
-  margin-bottom: 3vh;
+  margin-bottom: 5vh;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -113,7 +113,7 @@
 }
 
 .row1,.row2,.row3{
-  height:8vh;
+  height:9vh;
   
   color:var(--text)
 }
@@ -158,5 +158,39 @@
   
 }
 
+.left-half-playlist{
+  padding: 1vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height:100%;
+  width:40%;
+  justify-content: space-around;
+  font-family: 'Verdana';
+}
 
+.right-half-playlist{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-left: solid black 1px;
+  text-align:center;
+}
 
+.right-half-playlist img{
+  width:100%;
+  height: 50%;
+  margin: auto;
+}
+
+/* player */
+
+.player{
+  display:flex;
+  justify-content: space-around;
+}
+
+.player img{
+  height:40%;
+  width:70%;
+}

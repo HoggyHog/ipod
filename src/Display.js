@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import HomePage from './Pages/Homepage'
-import Music from './Pages/MusicPages/Music'
+
 import Coverflow from './Pages/Coverflow'
 import Settings from './Pages/Settings'
 import Games from './Pages/Games'
-import AllSongs from './Pages/MusicPages/AllSongs'
-import Albums from './Pages/MusicPages/Albums'
-import Artists from './Pages/MusicPages/Artists'
+import Playlist from './Pages/Playlist'
+import Player from './Player'
+import { renderIntoDocument } from 'react-dom/test-utils'
+
 
 function Display(props) {
+
 
   if(props.component==-1){
     return(<HomePage page={props.page} />)  
@@ -17,16 +19,33 @@ function Display(props) {
     return(<Coverflow />)  
   }
   if(props.component==1){
-    return(<Music page={props.page} component={props.component}/>)  
-  }
-  if(props.component==10){
-    return(<AllSongs/>)  
-  }
-  if(props.component==11){
-    return(<Artists/>)  
-  }
-  if(props.component==12){
-    return(<Albums/>)  
+    if(props.currentSongIndex===null){
+        return(<Playlist 
+          page={props.page} 
+          component={props.component}
+          songs={props.songs}
+          images={props.images}
+          currentSongIndex={props.currentSongIndex}
+          nextSongIndex={props.nextSongIndex}
+          updateNextSongIndex={props.updateNextSongIndex}
+          />)  
+
+    }
+    else{
+      return(<Player
+        page={props.page} 
+        component={props.component}
+        songs={props.songs}
+        images={props.images}
+        currentSongIndex={props.currentSongIndex}
+        nextSongIndex={props.nextSongIndex}
+        updateNextSongIndex={props.updateNextSongIndex}
+        isPlaying={props.isPlaying}
+        audios={props.audios}
+      />)
+    }
+
+
   }
   
   if(props.component==2){
@@ -35,8 +54,9 @@ function Display(props) {
   if(props.component==3){
     return(<Settings />)  
   }
-
 }
+
+
 
 
 
