@@ -1,6 +1,6 @@
 import React from 'react'
 //importing in the background image
-import img from '/Users/karthikeyanjaganathan/Desktop/CODING NINJAS/ipod/src/images/ipod-bg.jpeg'
+import img from './/images/ipod-bg.jpeg'
 
 class HomePage extends React.Component{
   

@@ -4,14 +4,14 @@ import Display from './Display'
 import Controls from './Controls'
 
 //importing in all images
-import img1 from '/Users/karthikeyanjaganathan/Desktop/CODING NINJAS/ipod/src/images/fish_room.jpeg'
-import img2 from '/Users/karthikeyanjaganathan/Desktop/CODING NINJAS/ipod/src/images/no_turning_back.jpeg'
-import img3 from '/Users/karthikeyanjaganathan/Desktop/CODING NINJAS/ipod/src/images/waterfall.jpeg'
+import img1 from './/images/fish_room.jpeg'
+import img2 from './/images/no_turning_back.jpeg'
+import img3 from './/images/waterfall.jpeg'
 
 //importing in all audios
-import audio1 from '/Users/karthikeyanjaganathan/Desktop/CODING NINJAS/ipod/src/music/Fish Room - Verified Picasso.mp3'
-import audio2 from '/Users/karthikeyanjaganathan/Desktop/CODING NINJAS/ipod/src/music/No Turning Back (Clean) - NEFFEX.mp3'
-import audio3 from '/Users/karthikeyanjaganathan/Desktop/CODING NINJAS/ipod/src/music/Waterfall - Aakash Gandhi.mp3'
+import audio1 from './/music/Fish Room - Verified Picasso.mp3'
+import audio2 from './/music/No Turning Back (Clean) - NEFFEX.mp3'
+import audio3 from './/music/Waterfall - Aakash Gandhi.mp3'
 
 class App extends React.Component {
   constructor(){

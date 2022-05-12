@@ -1,5 +1,5 @@
 import React from 'react'
-import HomePage from './Pages/Homepage'
+import HomePage from './Homepage'
 import Coverflow from './Pages/Coverflow'
 import Settings from './Pages/Settings'
 import Games from './Pages/Games'
