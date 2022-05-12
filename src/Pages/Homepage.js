@@ -1,11 +1,12 @@
 import React from 'react'
+//importing in the background image
+import img from '/Users/karthikeyanjaganathan/Desktop/CODING NINJAS/ipod/src/images/ipod-bg.jpeg'
 
 class HomePage extends React.Component{
   
-
-
   select=(n)=>{
     
+    //getting all the elements and putting them into an array for easy manipulation
     var p1=document.querySelector('.page1')
     var p2=document.querySelector('.page2')
     var p3=document.querySelector('.page3')
@@ -17,13 +18,18 @@ class HomePage extends React.Component{
     var a4=document.querySelector('.a4')
     var pages=[p1,p2,p3,p4]
     var arrows=[a1,a2,a3,a4]
+
+    //code to change the styles of the highlighted page
     for(var i of pages){
       i.style.setProperty('--bg','rgb(255,255,255)')
       i.style.setProperty('--font','black')
     }
-    for(var i of arrows){
-      i.style.setProperty('--visible','hidden')
+    for(var j of arrows){
+      j.style.setProperty('--visible','hidden')
     }
+
+    //.at(n) was super useful, coz we can use it even for negative or even when the index goes out of 
+    // the length of the array ->goes in a cyclic way, just what the project needs
     pages.at(n).style.setProperty('--bg','rgb(0, 150, 255)')
     pages.at(n).style.setProperty('--font','white')
     arrows.at(n).style.setProperty('--visible','none')
@@ -62,16 +68,11 @@ class HomePage extends React.Component{
           </div>
         </div>
         <div className="right-half">
-          <img src="https://images.unsplash.com/photo-1540508664702-7839b9d38075?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"></img>
+          <img src={img} alt="ipod-bg"></img>
         </div>
       </div>
-    )
-    
+    ) 
   }
-    
-
 }
-
-
 
 export default HomePage
