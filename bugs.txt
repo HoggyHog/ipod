@@ -1,0 +1,1 @@
+1) Work on the back scroll, make sure app dont collapse
