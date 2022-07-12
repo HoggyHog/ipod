@@ -1,4 +1,4 @@
-[Link to the app](https://ipod-app.netlify.app/)
+Here is the link to the app -> [Link](https://ipod-app.netlify.app/)
 
 
 # INTRO
@@ -9,6 +9,10 @@ This was a project I took up from coding ninjas, and the goal was to make a web 
 
 It was a library I used to read the scroll gestures to appropriately change pages.
 Here are the [docs](https://zingchart.github.io/zingtouch/)
+
+### How to Scroll
+
+Press one finger on touch pad, and using the other finger go either clockwise or anticlockwise to scroll in either directions.
 
 ## Netlify
 
